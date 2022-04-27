@@ -1,5 +1,13 @@
 module.exports = ({ env }) => ({
-  auth: {
-    secret: env('ADMIN_JWT_SECRET', '6391953e986b735d0e4021841b116145'),
+  apiToken: {
+    salt: env('API_TOKEN_SALT'),
   },
+  auth: {
+    secret: env('JWT_SECRET'),
+  },
+  forgotPassword: {
+    from: 'technology.arc@outlook.com',
+    replyTo: 'technology.arc@outlook.com',
+  },
+  url: '/dashboard',
 });
